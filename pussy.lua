@@ -1,1 +1,0 @@
-print("Vi sees, "..."Pussy");
