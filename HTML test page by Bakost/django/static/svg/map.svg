@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="css/svg.css"?>
+<svg viewBox="0 0 1000 1000" overflow="hidden" id="map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com" xmlns:html="http://www.w3.org/1999/xhtml" >
+<!-- overflow="hidden" -->
+	<rect width="100%" height="100%" fill="#add8e6"/>
+	<g transform="translate(500,500)">
+		<g id="map_container" transform="scale(1.5)" data-scale = "1.5" data-x="500" data-y="500">
+			<!-- Walls & Points -->
+			<g>
+				<path class="wall" d="
+					M -242, 40
+					v -155 h 92
+					v 73 v 7
+					h 170
+
+					M -242, -44
+					h 40
+					M -150, -44
+					h -40
+					"/>
+
+				<g transform="translate(0, 0)" data-order="C1" data-x="0" data-y="0" data-type="audienceornode" class="hidden-group">
+					<rect id="node1" data-order="C1" width="50" height="50"/>
+				</g>
+
+				<g transform="translate(-32, 0)" data-order="C2" data-x="-32" data-y="0" data-type="audienceornode" class="hidden-group">
+					<rect id="node2" data-order="C2" width="50" height="50"/>
+				</g>
+
+				<g transform="translate(-72, 0)" data-order="C3" data-x="-72" data-y="0" data-type="audienceornode" class="hidden-group">
+					<rect id="node3" data-order="C3" width="50" height="50"/>
+				</g>
+
+				<g transform="translate(-96, 0)" data-order="C4" data-x="-96" data-y="0" data-type="audienceornode" class="hidden-group">
+					<rect id="node4" data-order="C4" width="50" height="50"/>
+				</g>
+
+				<g transform="translate(-128, 0)" data-order="C5" data-x="-128" data-y="0" data-type="audienceornode" class="hidden-group">
+					<rect id="node5" data-order="C5" width="50" height="50"/>
+				</g>
+
+				<g transform="translate(-196, 0)" data-order="C6" data-x="-196" data-y="0" data-type="audienceornode" class="hidden-group">
+					<rect id="node6" data-order="C6" width="50" height="50"/>
+				</g>
+
+				<g transform="translate(-227, 0)" data-order="C7" data-x="-227" data-y="0" data-type="audienceornode" class="hidden-group">
+					<rect id="node7" data-order="C7" width="50" height="50"/>
+				</g>
+
+				<g transform="translate(-196, -36)" data-order="C8" data-x="-196" data-y="-36" data-type="audienceornode" class="hidden-group">
+					<rect id="node8" data-order="C8" width="50" height="50"/>
+				</g>
+
+				<g transform="translate(-196, -70)" data-order="C9" data-x="-196" data-y="-70" data-type="audienceornode" class="hidden-group">
+					<rect id="node9" data-order="C9" width="50" height="50"/>
+				</g>
+
+				
+				<!--
+				<circle class="wall" cx="0" cy="0" r="0.25px"/>
+				<circle class="wall" cx="-32" cy="0" r="0.25px"/>
+				<circle class="wall" cx="-72" cy="0" r="0.25px"/>
+				<circle class="wall" cx="-96" cy="0" r="0.25px"/>
+				<circle class="wall" cx="-128" cy="0" r="0.25px"/>
+				<circle class="wall" cx="-196" cy="0" r="0.25px"/>
+				<circle class="wall" cx="-227" cy="0" r="0.25px"/>
+				<circle class="wall" cx="-196" cy="-36" r="0.25px"/>
+				<circle class="wall" cx="-196" cy="-70" r="0.25px"/>
+				-->
+			</g>
+			
+			<!-- Rooms -->
+			<g>
+				<!-- Room 419 -->
+				<g transform="translate(-10,-35)" data-order="419" data-x="-10" data-y="-35" data-width="20" data-height="25" data-type="audienceornode">
+					<svg width="20" height="25">
+						<rect id="audience419" data-order="419" data-width="20" data-height="25" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">419</text>
+					</svg>					
+				</g>
+
+				<!-- Room 421 -->
+				<g transform="translate(-50,-35)" data-order="421" data-x="-50" data-y="-35" data-width="40" data-height="25" data-type="audienceornode">
+					<svg width="40" height="25">
+						<rect id="audience421" data-order="421" data-width="40" data-height="25" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">421</text>
+					</svg>					
+				</g>
+				
+
+				<!-- Room 422 -->
+				<g transform="translate(-50,10)" data-order="422" data-x="-50" data-y="10" data-width="70" data-height="30" data-type="audienceornode">
+					<svg width="70" height="30">
+						<rect id="audience422" data-order="422" data-width="70" data-height="30" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">422</text>
+					</svg>					
+				</g>
+				
+
+				<!-- Room 423 -->
+				<g transform="translate(-96,-35)" data-order="423" data-x="-96" data-y="-35" data-width="46" data-height="25" data-type="audienceornode">
+					<svg width="46" height="25">
+						<rect id="audience423" data-order="423" data-width="46" data-height="25" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">423</text>
+					</svg>					
+				</g>
+
+				
+				<!-- Room 424 -->
+				<g transform="translate(-112,10)" data-order="424" data-x="-112" data-y="10" data-width="62" data-height="30" data-type="audienceornode">
+					<svg width="62" height="30">
+						<rect id="audience424" data-order="424" data-width="62" data-height="30" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">424</text>
+					</svg>					
+				</g>
+				<!-- Room 425 -->
+				<g transform="translate(-150,-35)" data-order="425" data-x="-150" data-y="-35" data-width="54" data-height="25" data-type="audienceornode">
+					<svg width="54" height="25">
+						<rect id="audience425" data-order="425" data-width="54" data-height="25" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">425</text>
+					</svg>					
+				</g>
+				<!-- Room 426 -->
+				<g transform="translate(-150,10)" data-order="426" data-x="-150" data-y="10" data-width="38" data-height="30" data-type="audienceornode">
+					<svg width="38" height="30">
+						<rect id="audience426" data-order="426" data-width="38" data-height="30" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">426</text>
+					</svg>					
+				</g>
+				<!-- Room 427 -->
+				<g transform="translate(-178,-44)" data-order="427" data-x="-178" data-y="-44" data-width="28" data-height="18" data-type="audienceornode">
+					<svg width="28" height="18">
+						<rect id="audience427" data-order="427" data-width="28" data-height="18" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">427</text>
+					</svg>					
+				</g>
+				<!-- Room 428 -->
+				<g transform="translate(-210,10)" data-order="428" data-x="-210" data-y="10" data-width="60" data-height="30" data-type="audienceornode">
+					<svg width="60" height="30">
+						<rect id="audience428" data-order="428" data-width="60" data-height="30" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">428</text>
+					</svg>					
+				</g>
+				
+
+
+
+				<!-- KaFeDra -->
+				<g transform="translate(-242,-44)" data-order="K" data-x="-242" data-y="-44" data-width="28" data-height="35" data-type="audienceornode">
+					<svg width="28" height="35">
+						<rect id="audienceK" data-order="K" data-width="28" data-height="35" class="room-box" width="100%" height="100%"/>
+						<!-- Icon for KaFeDra -->
+						<image style="pointer-events: none;" y="10%" width="100%" href="icons/food.svg"/>
+					</svg>					
+				</g>
+
+				<g transform="translate(-210, -56)">
+					<image style="pointer-events: none;" width="28" href="icons/small_stairs.svg" transform="scale(1, 0.25)"/>
+				</g>
+
+				<g transform="translate(-178,-29)">
+					<image style="pointer-events: none;" width="25" href="icons/table.svg"/>
+				</g>
+
+
+
+				<!-- Room 429 -->
+				<g transform="translate(-182,-64)" data-order="429" data-x="-182" data-y="-64" data-width="32" data-height="20" data-type="audienceornode">
+					<svg width="32" height="20">
+						<rect id="audience429" data-order="429" data-width="32" data-height="20" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">429</text>
+					</svg>					
+				</g>
+				<!-- Room 430 -->
+				<g transform="translate(-182,-85)" data-order="430" data-x="-182" data-y="-85" data-width="32" data-height="21" data-type="audienceornode">
+					<svg width="32" height="21">
+						<rect id="audience430" data-order="430" data-width="32" data-height="21" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">430</text>
+					</svg>					
+				</g>
+				<!-- Room 431 -->
+				<g transform="translate(-242,-115)" data-order="431" data-x="-242" data-y="-115" data-width="92" data-height="30" data-type="audienceornode">
+					<svg width="92" height="30">
+						<rect id="audience431" data-order="431" data-width="92" data-height="30" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">431</text>
+					</svg>					
+				</g>
+				<!-- Room 432 -->
+				<g transform="translate(-242,-85)" data-order="432" data-x="-242" data-y="-85" data-width="32" data-height="21" data-type="audienceornode">
+					<svg width="32" height="21">
+						<rect id="audience432" data-order="432" data-width="32" data-height="21" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">432</text>
+					</svg>					
+				</g>
+				<!-- Room 433 -->
+				<g transform="translate(-242,-64)" data-order="433" data-x="-242" data-y="-64" data-width="32" data-height="20" data-type="audienceornode">
+					<svg width="32" height="20">
+						<rect id="audience433" data-order="433" data-width="32" data-height="20" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">433</text>
+					</svg>					
+				</g>
+				<!-- Room 434 -->
+				<g transform="translate(-242,10)" data-order="434" data-x="-242" data-y="10" data-width="32" data-height="30" data-type="audienceornode">
+					<svg width="32" height="30">
+						<rect id="audience434" data-order="434" data-width="32" data-height="30" class="room-box" width="100%" height="100%"/>
+						<text class="text-no-click room-text" x="50%" y="50%">434</text>
+					</svg>					
+				</g>
+			</g>	
+		</g>
+	</g>
+
+	<script href = "scripts/zoom.js" />
+	<script type = "module" src = "scripts/map.js" />
+
+	<!-- FOR DEBUG 
+	<text id="WF" class="text text-no-click" x="50%" y="50%"> (0,0) </text>
+	-->
+	<!-- <script href = "script.js" /> -->
+</svg>

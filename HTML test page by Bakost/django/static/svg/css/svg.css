@@ -1,0 +1,77 @@
+.text {
+	fill: #FF5500;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	white-space: pre;
+	
+}
+
+.text-no-click {
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.bwall {
+	fill: none;
+	stroke-miterlimit: 1;
+	stroke-linejoin: round;
+	stroke: #000;
+	stroke-width: 1px;
+}
+
+.wall {
+	fill: none;
+	stroke-miterlimit: 1;
+	stroke-linejoin: round;
+	stroke: #000;
+	stroke-width: 1px;
+}
+
+.room-text {
+	fill: #000;
+	font-family: Arial, sans-serif;
+	font-size: 8px;
+	white-space: pre;
+	alignment-baseline: middle;
+	text-anchor: middle;
+}
+
+.room-box {
+	fill: #8fe5ff;
+	stroke-miterlimit: 1;
+	stroke-linejoin: miter-clip;
+	stroke: #000;
+	stroke-width: 1;
+}
+
+.room-box:hover {
+	fill-opacity: 0.2;
+	stroke-opacity: 1;
+}
+
+.room-box-activated {
+	fill: #0044FF;
+	fill-opacity: 0.5;
+}
+
+.room-box-activated:hover {
+	fill-opacity: 0.5;
+}
+
+
+
+.line {
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+    transition: stroke-dashoffset 2s ease-out;
+	-webkit-transition: stroke-dashoffset 2s ease-out;
+}
+
+
+.hidden-group {
+	visibility: hidden;
+}

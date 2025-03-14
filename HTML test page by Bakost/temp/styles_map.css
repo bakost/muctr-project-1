@@ -1,0 +1,106 @@
+#map {
+    position: relative;
+    width: 100%; /* ширина карты адаптивная */
+    height: 0; /* высота карты будет зависеть от пропорций изображения */
+    padding-bottom: 100%; /* 600/900 (пропорции изображения, например 600 на 900) */
+}
+#floor-plan {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* чтобы линия всегда была над картинкой */
+    top: 0;
+    left: 0;
+}
+.line {
+    position: absolute;
+    background: #30638d;
+    height: 4px; /* высота линии */
+    transform-origin: 0 50%; /* для правильного поворота */
+    z-index: 10; /* чтобы линия была выше изображения */
+}
+.text-field {
+    width: 200px;
+    position: relative;
+}
+.text-field__in {
+    width: 100%;
+    padding: 10px 0 ;
+    border: 0;
+    outline: none; 
+    border-radius: 0;
+    appearance: none;
+    font-size: 18px;
+    border-bottom: 1px solid gray;
+    transition: border-color .3s;
+}
+.text-field__in:focus {
+    border-color: #2A497A; 
+}
+.text-field__in_placeholder {
+    display: block;
+    position: absolute; 
+    left: 0;
+    top: 10px; 
+    color: gray;
+    font-size: 18px; 
+    pointer-events: none;
+    transform-origin: left;
+    transition: top .3s, transform .3s, color .3s;
+} 
+.text-field__in:focus+.text-field__in_placeholder,
+.text-field__in:not(:focus):valid + .text-field__in_placeholder  {    
+    top: -15px;
+    transform: scale(.85);
+    color: #3C7DBF;
+}
+.text-field__exit {
+    width: 100%;
+    padding: 10px 0 ;
+    border: 0;
+    outline: none; 
+    border-radius: 0;
+    appearance: none;
+    font-size: 18px;
+    border-bottom: 1px solid gray;
+    transition: border-color .3s;
+}
+.text-field__exit:focus {
+    border-color: #2A497A; 
+}
+.text-field__exit_placeholder {
+    display: block;
+    position: absolute; 
+    left: 0;
+    top: 10px; 
+    color: gray;
+    font-size: 18px; 
+    pointer-events: none;
+    transform-origin: left;
+    transition: top .3s, transform .3s, color .3s;
+} 
+.text-field__exit:focus+.text-field__exit_placeholder,
+.text-field__exit:not(:focus):valid + .text-field__exit_placeholder  {    
+    top: -15px;
+    transform: scale(.85);
+    color: #3C7DBF;
+}
+.button-find { 
+    background-color: #3C7DBF;
+    color: white;
+    padding: 15px 50px; 
+    border: none;
+    outline: none; 
+    cursor: pointer; 
+    font-size: 15px; 
+    font-weight: 300;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: transform .5s;
+}
+.button-find:hover {
+    transform: scale(1.05);
+}
+.button-find:active {
+    transform: scale(0.99);
+}

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id = "map" viewBox="0 0 500 500" width="500px" height="500px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com" xmlns:html="http://www.w3.org/1999/xhtml">
+	<defs>
+		<style>
+			.text {
+				fill: #000000;
+				font-family: Arial, sans-serif;
+				font-size: 14px;
+				white-space: pre;
+				
+			}
+			.road {
+				fill: rgb(148, 220, 243);
+				stroke-miterlimit: 1;
+				stroke-linejoin: round;
+				stroke: rgb(0, 0, 0);
+				stroke-width: 3px;
+			}
+			.text-no-click {
+				pointer-events: none;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.room-box {
+				fill: #FFFF00;
+				opacity: 0;   				
+			}
+			.room-box:hover {
+				opacity: 0.2;
+			}
+			.room-box-activated {
+				fill: #0044FF;
+				opacity: 0.5;
+			}
+			.room-box-activated:hover {
+				opacity: 0.5;
+			}
+
+			.line {
+				stroke: black;
+				stroke-width: 2px;
+				fill: none;
+			}
+
+			#map_container {
+
+			}
+
+		</style>
+	</defs>
+
+	<rect width="100%" height="100%" style="fill: lightblue;"/>
+	<rect x="5%" y="5%" width="80%" height="80%" rx="4%" ry="4%" style="stroke: rgb(0, 0, 0); fill: rgb(153, 230, 229);"/>
+	
+	<g id="map_container" transform="translate(75,68)">
+		<path class = "road" d="M 0 0
+		h 50 v 20
+		h 75
+		v -20 h 50 v 50 h -20
+		v 25
+		h 20 v 50 h -20
+		v 50 h 100
+		v -20 h 20
+		v -30
+		h -20 v -50 h 50 v 50 h -20
+		v 30
+		h 20 v 50 h -50 v -20
+		h -100 v 50 h 100
+		v -20 h 50 v 50 h -50 v -20
+		h -100 v 20
+		h 20 v 50 h -50 v -50 h 20
+		v -20 h -115 v 20
+		h 20 v 50 h -50 v -50 h 20
+		v -140
+		h -20 v -50 h 50 v 20
+		h 75
+		v -20 h 20
+		v -25
+		h -20 v -20
+		h -75
+		v 20 h -50 v -50
+		Z
+
+		M 145 235
+			v -50
+			h -115
+			v 50
+			h 115
+			Z
+		M 145 175
+			v -50
+			h -20
+			v -20
+			h -75
+			v 20
+			h -20
+			v 50
+			h 115
+			Z
+		"/>
+
+		<g transform="translate(0, 0)">
+			<text class="text text-no-click" x="20" y="30">1</text>
+			<rect id="audience0" class="room-box" width="50" height="50" data-order="0"/>
+		</g>
+		
+		<g transform="translate(0, 75)">
+			<text class="text text-no-click" x="20" y="30">2</text>
+			<rect id="audience1" class="room-box" width="50" height="50" data-order="1"/>
+		</g>
+  
+  		<g transform="translate(125, 0)">
+			<text class="text text-no-click" x="20" y="30">3</text>
+			<rect id="audience2" class="room-box" width="50" height="50" data-order="2"/>
+		</g>
+
+		<g transform="translate(125, 75)">
+			<text class="text text-no-click" x="20" y="30">4</text>
+			<rect id="audience3" class="room-box" width="50" height="50" data-order="3"/>
+		</g>
+
+		<g transform="translate(255, 75)">
+			<text class="text text-no-click" x="20" y="30">5</text>
+			<rect id="audience4" class="room-box" width="50" height="50" data-order="4"/>
+		</g>
+
+		<g transform="translate(255, 155)">
+			<text class="text text-no-click" x="20" y="30">6</text>
+			<rect id="audience5" class="room-box" width="50" height="50" data-order="5"/>
+		</g>
+
+		<g transform="translate(255, 215)">
+			<text class="text text-no-click" x="20" y="30">7</text>
+			<rect id="audience6" class="room-box" width="50" height="50" data-order="6"/>
+		</g>
+
+		<g transform="translate(0, 265)">
+			<text class="text text-no-click" x="20" y="30">8</text>
+			<rect id="audience7" class="room-box" width="50" height="50" data-order="7"/>
+		</g>
+		
+		<g transform="translate(125, 265)">
+			<text class="text text-no-click" x="20" y="30">9</text>
+			<rect id="audience8" class="room-box" width="50" height="50" data-order="8"/>
+		</g>
+
+	</g>
+
+	<script href = "scripts/map.js" />
+</svg>

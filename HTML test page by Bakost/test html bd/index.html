@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Stud`s muctr</title>
+	<script>
+		function loadData() {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "script.php", true);
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState === 4 && xhr.status === 200) {
+					var data = JSON.parse(xhr.responseText);
+					var table = "<table border='1'><tr><th>ID</th><th>Item</th></tr>";
+					//$sum = 0;
+					
+					data.forEach(function(row) {
+						table += "<tr><td>" + row.id + "</td><td>" + row.item + "</td></tr>";
+						//$sum += (int)row.item;
+					});
+
+					table += "</table>";
+					//table += "<p>" + $sum + "</p>";
+
+					document.getElementById("data").innerHTML = table;
+				}
+			};
+			xhr.send();
+		}
+		window.onload = loadData;
+	</script>
+</head>
+<body>
+	<h1>Данные из БД muctr таблицы test:</h1>
+	<div id="data"></div>
+	<p>Проверка</p>
+</body>
+</html>

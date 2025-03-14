@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="main.css"?>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com" xmlns:html="http://www.w3.org/1999/xhtml" >
+	<rect width="100%" height="100%" fill="none"/>
+	<path d="
+		M 30 40
+		h 40
+		L 80 50
+		L 20 50
+		L 30 40
+		Z
+		M 20 50
+		v 5 h 60 v -5
+		Z
+		M 24 55
+		v 24 h 4 v -24
+		Z
+		M 72 55
+		v 24 h 4 v -24
+		Z
+		M 65 55
+		v 15 h 3 v -15
+		Z
+		M 32 55
+		v 15 h 3 v -15
+		Z
+		" fill="none" stroke="black" stroke-width="1.5px" stroke-linejoin="round"/>
+</svg>

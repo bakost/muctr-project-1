@@ -1,0 +1,569 @@
+html, body {
+  background-color: lightblue;
+  margin: 0;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.floor {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.floor.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Стиль для ПК (экраны шире 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+    margin-left: 0;
+    gap: 0;
+  }
+
+  #svg-object {
+    max-width: 2000px;
+    min-height: 800px;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    position: absolute;
+  }
+
+  #carousel-container {
+    position: absolute;
+    display: none;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+  }
+
+  .navigation-buttons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  
+  .navigation-buttons button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.1s ease;
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+  }
+
+  #close-carousel-button {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    z-index: 10;
+  }
+
+  .module-fill {
+    width: 0;
+    height: auto;
+    padding: 0;
+    max-height: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    transform-origin: left;
+    font-size: 15px;
+    z-index: 1000;
+    transition: width 0.5s ease, opacity 0.5s ease, padding 0.5s ease, left 0.5s ease;
+  }
+
+  .module-fill.visible {
+    width: 250px;
+    padding: 20px;
+    opacity: 1;
+    left: calc(100% + 10px);
+  }
+
+  .module-fill.hidden {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    left: 100%;
+  }
+
+  .menu-button-container{
+    padding: 20px;
+  }
+
+  .menu-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    position: absolute;
+    transition: background-color 0.3s ease;
+  }
+
+  .route-points {
+    flex-grow: 1;
+    overflow-y: auto;
+    min-height: 50px;
+    max-height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    white-space: nowrap;
+  }
+
+  #zoom-controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Стиль для мобильных устройств (экраны до 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+    margin-left: 0;
+    gap: 0;
+  }
+
+  #svg-object {
+      max-width: 1200px;
+      min-height: 2500px;
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      position: absolute;
+  }
+
+  #carousel-container {
+    position: absolute;
+    display: none;
+    width: 510px;
+    height: 680px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+  }
+
+  .navigation-buttons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px 0;
+  }
+  
+  .navigation-buttons button {
+    padding: 20px 60px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: transform 0.1s ease;
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+  }
+
+  #close-carousel-button {
+    position: absolute; 
+    top: 10px; 
+    font-size: 30px;
+    right: 15px; 
+    z-index: 10;
+  }
+
+  .module-fill {
+    width: 0;
+    height: auto;
+    padding: 0;
+    min-height: 500px;
+    max-height: 800px;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    transform-origin: left;
+    font-size: 25px;
+    z-index: 1000;
+    transition: width 0.5s ease, opacity 0.5s ease, padding 0.5s ease, left 0.5s ease;
+  }
+
+  .module-fill.visible {
+    width: 475px;
+    padding: 20px;
+    opacity: 1;
+    left: calc(100% + 10px);
+  }
+
+  .module-fill.hidden {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    left: 100%;
+  }
+
+  .menu-button-container{
+    padding: 20px;
+  }
+
+  .menu-button {
+    padding: 25px 40px;
+    font-size: 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    position: absolute;
+    transition: background-color 0.3s ease;
+  }
+
+  .route-points {
+    flex-grow: 1;
+    overflow-y: auto;
+    min-height: 50px;
+    max-height: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    white-space: nowrap;
+  }
+
+  #zoom-controls button {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#svg-element {
+  width: 500px;
+  height: 500px;
+  z-index: 10;
+}
+
+.carousel-images {
+  display: flex;
+  margin-top: 50px;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 70%;
+}
+
+.carousel-image {
+  flex: 0 0 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.enter-left {
+  transform: translateX(-100%);
+  animation: slideInFromLeft 0.5s forwards;
+}
+
+.enter-right {
+  transform: translateX(100%);
+  animation: slideInFromRight 0.5s forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+.exit-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.exit-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.carousel-button:hover {
+  background-color: #21262b;
+}
+
+#prev-button {
+  left: 10px;
+}
+
+#prev-button.pressed {
+  box-shadow: 0 2px 4px #424443;
+}
+
+#next-button {
+  right: 10px;
+}
+
+#next-button.pressed {
+  box-shadow: 0 2px 4px #424443;
+}
+
+
+.navigation-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.navigation-buttons button:active {
+  transform: scale(0.9);
+}
+
+
+.close-carousel-button button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 7px 10px;
+	background-color: #c8f8f7;
+	border: none;
+	border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.close-carousel-button button:hover {
+	background-color: #70a6a2;
+}
+
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input-field label {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.input-field input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.apply-button {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.apply-button.pressed {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px #256f29;
+}
+
+.apply-button:hover {
+  background-color: #256f29;
+}
+
+.apply-button:active {
+  transform: scale(0.9);
+}
+
+.clear-path-button {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #ff000d;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.clear-path-button:hover {
+  background-color: #830000;
+}
+
+.clear-path-button:active {
+  transform: scale(0.9);
+}
+
+.divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+.menu-button:hover {
+	background-color: #45a049;
+}
+
+
+
+#zoom-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+}
+
+#zoom-controls button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+
+
+.floor-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.floor-btn {
+  font-size: inherit;
+  padding: 10px 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.floor-btn:hover {
+  background-color: #0056b3;
+}
+
+.floor-btn:active {
+  transform: scale(0.9);
+}

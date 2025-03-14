@@ -1,0 +1,82 @@
+{% extends 'map/base.html' %}
+{% load static %}
+
+{% block title %}
+    Muctr map
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/map.css' %}">
+    <script>  
+        window.svgPaths = {
+            floor4: "{% static 'svg/floor4.svg' %}",
+            floor5: "{% static 'svg/floor5.svg' %}",
+        };
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="menu-button-container">
+            <button class="menu-button" id="menu-button">Меню</button>
+        </div>
+
+        <div data-floor-wrapper="{% static 'svg/floor4.svg' %}" id="floor4" class="floor active">
+            <object id="svg-object" data="{% static 'svg/floor4.svg' %}"></object>
+        </div>
+        <div data-floor-wrapper="{% static 'svg/floor5.svg' %}" id="floor5" class="floor">
+            <object id="svg-object" data="{% static 'svg/floor5.svg' %}"></object>
+        </div>
+
+        <div id="module-fill" class="module-fill hidden">
+            <div class="input-field">
+                <label for="from">Откуда:</label>
+                <input type="text" id="from" placeholder="Введите начальную точку">
+            </div>
+            
+            <div class="input-field">
+                <label for="to">Куда:</label>
+                <input type="text" id="to" placeholder="Введите конечную точку">
+            </div>
+
+            <div class="floor-buttons">
+                <button class="btn btn-primary floor-btn" id="switch-to-floor4">Этаж 4</button>
+                <button class="btn btn-primary floor-btn" id="switch-to-floor5">Этаж 5</button>
+            </div>
+            
+
+            <button class="apply-button">Применить</button>
+            <button class="clear-path-button">Очистить маршрут</button>
+
+            <div>Расписание можно посмотреть в ТГ:</div>
+            <a href="https://t.me/student_muctr_bot" target="_blank">Ссылка</a>
+            
+            <div id="routeGroup"></div>
+        </div>
+
+        <div id="carousel-container">
+            <div class="close-carousel-button">
+                <button id="close-carousel-button">✖</button>
+            </div>
+
+            <div class="carousel-images"></div>
+
+            <div class="navigation-buttons">
+                <button id="from-here-button" data-order="">Отсюда</button>
+                <button id="to-here-button" data-order="">Сюда</button>
+            </div>
+
+            <button class="carousel-button" id="prev-button">&lt;</button>
+            <button class="carousel-button" id="next-button">&gt;</button>
+        </div>
+
+        <div id="zoom-controls">
+            <button id="zoom-in" disabled>+</button>
+            <button id="zoom-out" disabled>−</button>
+        </div>        
+    </div>
+
+    <script type="module" src="{% static 'scripts/change-floor.js' %}"></script>
+    <script type="module" src="{% static 'scripts/carousel.js' %}"></script>
+    <script type="module" src="{% static 'scripts/module-fill.js' %}"></script>
+{% endblock %}

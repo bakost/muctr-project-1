@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" width="500px" height="500px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+	<defs>
+		<path id="path-0" d="M 0 0 L 120 80"/>
+		<path id="path-1" d="M 240 80 L 280 70"/>
+		<path id="path-2" d="M 80 180 L 120 180"/>
+		<path id="path-3" d="M 233 163 L 277 177"/>
+		<path id="path-4" d="M 66 421 L 103 421"/>
+		<path id="path-5" d="M 241 424 L 287 425"/>
+		<path id="path-6" d="M 402 356 C 410 355 416 358 421 359 C 429 360 433 361 439 361 L 439 361 L 440 361"/>
+		<path id="path-7" d="M 404 252 L 445 270"/>
+		<path id="path-8" d="M 405 164 C 415.102 168.12 422.774 169.956 429.36 173.249 L 433.361 173.82 C 435.085 173.82 441.344 174.922 441.937 176.107"/>
+		<style>
+			.text {
+				fill: #515151;
+				font-family: Arial, sans-serif;
+				font-size: 28px;
+				white-space: pre;
+			}
+			.road {
+				fill: rgb(148, 220, 243);
+				stroke-miterlimit: 1;
+				stroke-linejoin: round;
+				stroke: rgb(0, 0, 0);
+				stroke-width: 3px;
+			}
+		</style>
+	</defs>
+
+	<rect x="23.16" y="24.747" width="453.679" height="450.507" style="stroke: rgb(0, 0, 0); fill: rgb(153, 230, 229);"/>
+	<path class = "road" d="M 50 50
+		h 50 v 20
+		h 75
+		v -20 h 50 v 50 h -20
+		v 25
+		h 20 v 50 h -20
+		v 50 h 100
+		v -20 h 20
+		v -30
+		h -20 v -50 h 50 v 50 h -20
+		v 30
+		h 20 v 50 h -50 v -20
+		h -100 v 50 h 100
+		v -20 h 50 v 50 h -50 v -20
+		h -100 v 20
+		h 20 v 50 h -50 v -50 h 20
+		v -20 h -115 v 20
+		h 20 v 50 h -50 v -50 h 20
+		v -140
+		h -20 v -50 h 50 v 20
+		h 75
+		v -20 h 20
+		v -25
+		h -20 v -20
+		h -75
+		v 20 h -50 v -50
+		Z
+
+		M 195 285
+			v -50
+			h -115
+			v 50
+			h 115
+			Z
+		M 195 225
+			v -50
+			h -20
+			v -20
+			h -75
+			v 20
+			h -20
+			v 50
+			h 115
+			Z
+		"/>
+
+	<text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 28px; white-space: pre;">
+		<textPath xlink:href="#path-0">1</textPath>
+	</text>
+	<text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 28px; white-space: pre;">
+		<textPath xlink:href="#path-1">2</textPath>
+	</text>
+	<text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 28px; white-space: pre;">
+		<textPath xlink:href="#path-2">4</textPath>
+	</text>
+	<text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 28px; white-space: pre; transform-box: fill-box; transform-origin: 83.2285% 80.1743%;" transform="matrix(0.997651, -0.0685, 0.259034, 0.984569, 8.930025, 7.316177)">
+		<textPath xlink:href="#path-3">3</textPath>
+	</text>
+	<text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 28px; white-space: pre;">
+		<textPath xlink:href="#path-4">9</textPath>
+	</text>
+	<text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 28px; white-space: pre;">
+		<textPath xlink:href="#path-5">8</textPath>
+	</text>
+	<text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 28px; white-space: pre; transform-box: fill-box; transform-origin: 89.6664% 75.907%;" transform="matrix(0.969277, -0.245971, 0.245971, 0.969277, 10.43868, 3.379061)">
+		<textPath xlink:href="#path-6">7</textPath>
+	</text>
+	<text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 28px; white-space: pre; transform-box: fill-box; transform-origin: 95.2595% 104.658%;" transform="matrix(0.988625, -0.150404, 0.150404, 0.988625, 9.147388, 8.003939)">
+		<textPath xlink:href="#path-7">6</textPath>
+	</text>
+	<text class="text" transform="matrix(0.94407, -0.329744, 0.329744, 0.94407, -27.07318, 153.942171)">
+		<textPath xlink:href="#path-8">5</textPath>
+	</text>
+</svg>
