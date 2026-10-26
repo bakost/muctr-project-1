@@ -1,5 +1,6 @@
 .vscode
 .DS_Store
+__pycache__
 karousel-page-test by Bakost
 old_files
 Telegram bot by Andrey/config.py
